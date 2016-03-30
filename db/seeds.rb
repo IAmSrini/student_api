@@ -37,16 +37,16 @@ student_list.each do|val1,val2,val3,val4|
 	Student.create(name:val1,email:val2,phone:val3)
 end
 
-registration_list.each do|val1,val2,val3|
-	Registration.create(student_id:val1,course_id:val2,semester_id:val3)
-end
-
 coursetable_list.each do |val1,val2|
 	Course.create(semester_id:val1, coursename:val2)
 end
 
 semestertable_list.each do|val1,val2|
 	Semester.create(student_id:val1,sem:val2)
+end
+
+registration_list.each do|val1,val2,val3|
+	Registration.create(student_id:val1,course_id:val2,semester_id:val3)
 end
 
 #Semester.create(student_id:1,sem:'Fall 2016')
