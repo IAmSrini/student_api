@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :semesters, except: [:new, :edit]
   resources :students, except: [:new, :edit]
 
+root 'students#index'
 #Routes for semester registrations
   get 'spring2016.json' => 'semesters#spring16'
   get 'fall2016.json' => 'semesters#fall16'
