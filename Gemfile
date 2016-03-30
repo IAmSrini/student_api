@@ -8,8 +8,6 @@ gem 'rails-api'
 gem 'spring', :group => :development
 
 
-gem 'sqlite3'
-
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # To use ActiveModel has_secure_password
@@ -26,3 +24,11 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+group :development do
+	gem 'sqlite3'
+	gem 'web-console','~>2.0'
+end
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
